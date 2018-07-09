@@ -37,6 +37,9 @@
     </head>
     <body>
         <!-- navigation -->
+        <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase-app.js"></script><script src="https://www.gstatic.com/firebasejs/5.2.0/firebase-firestore.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
         <nav class="navbar no-margin-bottom alt-font bg-white sidebar-nav">
             <div class="container navigation-menu">
                 <div class="row">
@@ -146,14 +149,21 @@
                                 <form id="personalcontactform" action="javascript:void(0)" method="post">
                                     <div id="success" class="no-margin-lr"></div>
                                     <!-- input -->
-                                    <input type="text" name="name" id="name" placeholder="* YOUR NAME" class="big-input alt-font">
-                                    <!-- end input -->
-                                    <!-- input  -->
+                                    <input id="first_name" type="text" name="first_name" placeholder="* YOUR FIRST NAME" class="big-input alt-font">
+                                    <input id="middle_name" type="text" name="middle_name" placeholder="* YOUR MIDDLE NAME" class="big-input alt-font">
+                                    <input id="last_name" type="text" name="last_name" placeholder="* YOUR LAST NAME" class="big-input alt-font">
+                                    <div class="select-style big-select alt-font">
+                                        <select id="sex" name="interestedin">
+                                            <option selected>* YOUR SEX</option>
+                                            <option value="male">M</option>
+                                            <option value="female">F</option>                                            
+                                        </select>
+                                    </div>
                                     <input type="text" name="email" id="email" placeholder="* YOUR EMAIL" class="big-input alt-font">
-                                    <input type="text" name="number" id="number" placeholder="* STUDENT NUMBER" class="big-input alt-font">
-                                    <input type="text" name="date" id="date" placeholder="* YOUR BIRTHDATE" class="big-input alt-font">
-                                    <input type="text" name="number" id="number" placeholder="* CONTACT NUMBER" class="big-input alt-font">
-                                    <input type="text" name="facebook" id="link" placeholder="* FACEBOOK ACCOUNT" class="big-input alt-font">
+                                    <input type="text" name="contact_number" id="contact_number" placeholder="* CONTACT NUMBER" class="big-input alt-font">
+                                    <input type="text" name="student_number" id="student_number" placeholder="* STUDENT NUMBER" class="big-input alt-font">
+                                    <input type="date" name="date" id="birthday" placeholder="* YOUR BIRTHDATE" class="big-input alt-font">
+                                    <input type="text" name="facebook" id="facebook_account" placeholder="* FACEBOOK ACCOUNT" class="big-input alt-font">                                    
                                     <!-- end input -->
                                     <!-- dropdown  -->
                                     <div class="select-style big-select alt-font">
@@ -167,12 +177,19 @@
                                             <option value="Other">Other</option>
                                         </select>
                                     </div>
+                                    <div class="select-style big-select alt-font">
+                                        <select id="interview_schedule" name="interestedin">
+                                            <option value="8-13-2018">August 13, 2018</option>
+                                            <option value="8-15-2018">August 15, 2018</option>
+                                            <option selected value="8-20-2018">August 20, 2017</option>
+                                        </select>
+                                    </div>
                                     <!-- end dropdown  -->
                                     <!-- textarea  -->
-                                    <textarea name="comment" id="comment" placeholder="Why do you want to join TINTA?" class="big-input alt-font"></textarea>
+                                    <textarea name="comment" id="writing_prompt_answer" placeholder="Why do you want to join TINTA?" class="big-input alt-font"></textarea>                                    
                                     <!-- end textarea  -->
                                     <!-- button  -->
-                                    <button id="personal-contact-button" type="submit" class="highlight-button-dark btn btn-medium">Register</button>
+                                    <input id="personal-contact-button" type="button" class="highlight-button-dark btn btn-medium" value="Register" onclick="submitForm()" />
                                     <!-- end button  -->
                                 </form>
                             </div>
@@ -633,6 +650,7 @@
             }
             var map = new google.maps.Map(document.getElementById("map"), mapOptions);
             }
-            </script>
+        </script>
+        <script type="text/javascript" src="js/index.js"></script>
     </body>
 </html>

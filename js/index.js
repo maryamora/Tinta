@@ -1,10 +1,10 @@
 var config = {
-	apiKey: "AIzaSyD-On9DddF8uicT3Fv6U7ZT7fPpoQ5hXqY",
-	authDomain: "tinta-recruitment-application.firebaseapp.com",
-	databaseURL: "https://tinta-recruitment-application.firebaseio.com",
-	projectId: "tinta-recruitment-application",
-	storageBucket: "tinta-recruitment-application.appspot.com",
-	messagingSenderId: "46899736997"
+	apiKey: "AIzaSyB-VgFWXAnwvkrGb6OpjThCiSke7aYT6lQ",
+    authDomain: "tinta-up-cebu.firebaseapp.com",
+    databaseURL: "https://tinta-up-cebu.firebaseio.com",
+    projectId: "tinta-up-cebu",
+    storageBucket: "tinta-up-cebu.appspot.com",
+    messagingSenderId: "836988490789"
 };
 
 firebase.initializeApp(config);

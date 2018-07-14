@@ -136,22 +136,22 @@
                         <div class="margin-five no-margin-bottom blog-post blog-post-style5 no-margin-lr">
                             <div class="col-md-6 col-sm-12">
                                 <form id="personalcontactform" action="javascript:void(0)" method="post">
-                                    <div id="success" class="no-margin-lr"></div>
-                                    <!-- input -->
-                                    <input id="first_name" type="text" name="first_name" placeholder="* YOUR FIRST NAME" class="big-input alt-font">
-                                    <input id="middle_name" type="text" name="middle_name" placeholder="* YOUR MIDDLE NAME" class="big-input alt-font">
-                                    <input id="last_name" type="text" name="last_name" placeholder="* YOUR LAST NAME" class="big-input alt-font">
-                                    <div class="select-style big-select alt-font">
-                                        <select id="sex" name="interestedin">
+                                    <input id="first_name" type="text" name="first_name" placeholder="* YOUR FIRST NAME" class="medium-input alt-font" >
+                                    <input id="middle_name" type="text" name="middle_name" placeholder="* YOUR MIDDLE NAME" class="medium-input alt-font">                                            
+                                    <input id="last_name" type="text" name="last_name" placeholder="* YOUR LAST NAME" class="medium-input alt-font" >                                            
+                                    <div class="select-style medium-select alt-font">
+                                        <select id="sex" name="interestedin" style="width: 100%;">
                                             <option selected>* YOUR SEX</option>
                                             <option value="male">M</option>
-                                            <option value="female">F</option>                                            
+                                            <option value="female">F</option>                                       
                                         </select>
                                     </div>
-                                    <input type="text" name="email" id="email" placeholder="* YOUR EMAIL" class="big-input alt-font">
-                                    <input type="text" name="contact_number" id="contact_number" placeholder="* CONTACT NUMBER" class="big-input alt-font">
-                                    <input type="text" name="student_number" id="student_number" placeholder="* STUDENT NUMBER" class="big-input alt-font">
-                                    <input type="date" name="date" id="birthday" placeholder="* YOUR BIRTHDATE" class="big-input alt-font">
+                                    <input type="text" name="email" id="email" placeholder="* YOUR EMAIL" class="small-input alt-font">                                                
+                                    <input type="text" name="contact_number" id="contact_number" placeholder="* CONTACT NUMBER" class="small-input alt-font">                                                
+                                    <input type="text" name="student_number" id="student_number" placeholder="* STUDENT NUMBER" class="small-input alt-font">
+                                    <div id="success" class="no-margin-lr"></div>
+                                    <!-- input -->
+                                    <input type="text" name="date" onfocus="(this.type='date')" id="birthday" placeholder="* YOUR BIRTHDATE" class="big-input alt-font" >
                                     <input type="text" name="facebook" id="facebook_account" placeholder="* FACEBOOK ACCOUNT" class="big-input alt-font">                                    
                                     <!-- end input -->
                                     <!-- dropdown  -->
@@ -168,6 +168,9 @@
                                     </div>                                    
                                     <!-- end dropdown  -->
                                     <!-- textarea  -->
+                                    <label for="writing_prompt_answer">Alright, just for fun, write a 100-word drabble and include the following words in it. Hope to see ya!</label>
+                                    
+                                    <label>Your words:</label><br /><label class="big-label" id="randomized_drabbler" for="writing_prompt_answer"></label>
                                     <textarea name="comment" id="writing_prompt_answer" placeholder="Why do you want to join TINTA?" class="big-input alt-font" rows="10"></textarea>                                    
                                     <!-- end textarea  -->
                                     <!-- button  -->

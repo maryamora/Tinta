@@ -11,8 +11,26 @@ firebase.initializeApp(config);
 
 var db = firebase.firestore()
 
+prompts = [
+	"'sleeping sound, to waking up woke'",
+	"'well, men have rights, too!', says the 'meninist'",
+	"you're smart kid, but while you're here, that last bit's probably all that you are",
+	"'we must all stand for one another', he typed from the comforts of a lush mansion",
+	"A knife scrapes against a wall of a prison cell... the blood of the innocent tracing another tally",
+	"'Mam, ser, it is better to give than to receive', the overgrown ragamuffin cracked out of tune",
+	"'It ain't gon' matta ta me how many skirtsies ya wear unda ya skin.'",
+	"Fifteen million people calling from hell... millions more are coming down",
+	"the kind of girl who talked of books, but never about",
+	"`LOADING test_hum_sample61513233: 61513233 OF 903,239,148,153 FOR INCLUSION ... CLEANSING SUCCESSFUL`",
+	"'This is my 5th name in 3 years. I know precisely who I am.'"
+];
+
+randomIndex  = Math.floor(Math.random() * prompts.length);
+
 const settings = {/* your settings... */ timestampsInSnapshots: true};
 db.settings(settings);
+
+$('#randomized_drabbler')[0].innerHTML = prompts[randomIndex];
 
 function submitForm() {	
 	first_name = $('#first_name')[0];
